@@ -1,0 +1,63 @@
+h3 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.home {
+  background: url("./../../public/img/back.jpg") no-repeat;
+  background-size: cover;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .navbar {
+    position: fixed;
+    width: calc(100% - 18rem);
+    top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    border-radius: 3rem;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgb(172, 172, 172);
+
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+
+      li {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .heroContent {
+    width: 50%;
+    text-align: center;
+    color: white;
+
+    h1 {
+      font-size: 3rem;
+
+      span {
+        color: orangered;
+      }
+    }
+  }
+}
+
+section {
+  min-height: 100vh;
+
+  h2 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
