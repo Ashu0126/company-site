@@ -1,0 +1,19 @@
+@import "./../../styles/variables.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-text;
+  color: $white;
+  padding: 1.5rem 4rem;
+  position: fixed;
+  width: calc(100% - 8rem);
+
+  ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    font-weight: 600;
+  }
+}

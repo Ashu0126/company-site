@@ -1,17 +1,11 @@
+import Navbar from "./components/Navbar";
 import style from "./styles/app.module.scss";
 
 function App() {
   return (
     <div className={style.app}>
+      <Navbar />
       <section className={style.home}>
-        <div className={style.navbar}>
-          <h3>COMPANY NAME</h3>
-          <ul>
-            <li>services</li>
-            <li>about us</li>
-            <li>contact us</li>
-          </ul>
-        </div>
         <div className={style.heroContent}>
           <h1>
             Lorem ipsum <span>dolor, sit</span>
@@ -24,6 +18,10 @@ function App() {
           </p>
           <button>explore us</button>
         </div>
+        <img
+          src="https://www.zebrawebs.com/images/background/digital%20seo.png"
+          alt=""
+        />
       </section>
       <section>
         <h2>Our Services</h2>
