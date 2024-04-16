@@ -1,0 +1,28 @@
+@import "./../../styles/variables.scss";
+
+.serviceContainer {
+  padding: 5rem;
+  .header {
+    margin-bottom: 4rem;
+    p,
+    h6 {
+      font-size: 1rem;
+    }
+
+    h2 {
+      text-align: start;
+      margin-bottom: 0.25rem;
+      color: $primary-text;
+    }
+
+    p {
+      width: 35rem;
+    }
+  }
+
+  .serviceCards {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
