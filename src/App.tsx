@@ -1,3 +1,4 @@
+import ContactUs from "./components/ContactUs";
 import Navbar from "./components/Navbar";
 import OurServices from "./components/OurServices";
 import style from "./styles/app.module.scss";
@@ -30,9 +31,7 @@ function App() {
       <section>
         <h2>About Us</h2>
       </section>
-      <section>
-        <h2>Contact Us</h2>
-      </section>
+      <ContactUs />
     </div>
   );
 }
