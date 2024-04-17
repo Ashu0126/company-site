@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+/api/node_modules
+
 # production
 /build
 

@@ -13,7 +13,7 @@ const Card = () => {
         assumenda nihil sint? Nam aliquid natus excepturi expedita perspiciatis,
         minus
       </p>
-      <a href="#">Explore</a>
+      <a href="javascript.void(0)">Explore</a>
     </div>
   );
 };
