@@ -83,6 +83,7 @@ const ContactUs = () => {
           icon={
             "https://icons.iconarchive.com/icons/iconsmind/outline/512/Paper-Plane-icon.png"
           }
+          type="submit"
         >
           Get In Touch
         </Button>
