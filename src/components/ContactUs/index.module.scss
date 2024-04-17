@@ -1,9 +1,10 @@
 @import "./../../styles/variables.scss";
 
 .contactContainer {
-  background: url("https://framerusercontent.com/images/ip9m0KLspeFXqgilQW3YUYYfH4.png")
+  background: url("https://paradisegroup.co.in/blog/wp-content/uploads/2019/10/bg_contact-1.png")
     no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position-x: left;
   padding: 5rem;
   display: flex;
   justify-content: space-between;
@@ -61,17 +62,24 @@
     .input {
       display: flex;
       align-items: center;
+      position: relative;
 
       input,
       textarea {
-        position: relative;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid rgb(192, 192, 192);
         min-width: calc(100% - 5rem);
         max-width: calc(100% - 5rem);
         background-color: transparent;
+        font-size: 1rem;
+
+        &:focus {
+          border-color: $black;
+        }
       }
 
       img {
+        top: 0.5rem;
+        left: 0;
         position: absolute;
         width: 1.3rem;
         z-index: 4;

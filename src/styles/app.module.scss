@@ -8,49 +8,6 @@ h2 {
   font-size: 2.5rem;
 }
 
-.home {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 3rem;
-  background-color: $primary-text;
-  color: $white;
-  padding: 2rem 5rem;
-
-  .heroContent {
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 1.1rem;
-    width: 90%;
-    margin-bottom: 1rem;
-  }
-
-  button {
-    font-size: 1rem;
-    background-color: $white;
-    color: $primary-text;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-  }
-
-  img {
-    width: 50%;
-  }
-}
-
-section {
-  min-height: 100vh;
-}
-
 @media (max-width: 850px) {
   .home {
     flex-direction: column;
