@@ -15,7 +15,7 @@ const ContactUs = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/send-email",
+        "https://company-site-api.vercel.app/send-email",
         payload
       );
 
