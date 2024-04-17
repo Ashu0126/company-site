@@ -1,4 +1,4 @@
-import Card from "../Card";
+import Card from "../../molecules/Card";
 import style from "./index.module.scss";
 
 const OurServices = () => {

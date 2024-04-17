@@ -1,0 +1,31 @@
+{
+  "form": {
+    "inputField": [
+      {
+        "name": "name",
+        "placeholder": "Name",
+        "icon": "https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png",
+        "type": "text"
+      },
+      {
+        "name": "email",
+        "placeholder": "Email Address",
+        "icon": "https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png",
+        "type": "email"
+      },
+      {
+        "name": "cname",
+        "placeholder": "Company Name",
+        "icon": "https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png",
+        "type": "text"
+      },
+      {
+        "name": "message",
+        "placeholder": "How we can help you? Feel free to contact us!",
+        "icon": "https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png",
+        "type": "textarea"
+      }
+    ],
+    "btnText": "Get In Touch"
+  }
+}

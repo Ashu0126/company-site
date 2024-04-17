@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Button from "../../atoms/Button";
 import style from "./index.module.scss";
 
 const AboutUs = () => {

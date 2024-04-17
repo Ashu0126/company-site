@@ -1,8 +1,8 @@
-import AboutUs from "./components/AboutUs";
-import ContactUs from "./components/ContactUs";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import OurServices from "./components/OurServices";
+import AboutUs from "./components/organisms/AboutUs";
+import ContactUs from "./components/organisms/ContactUs";
+import Home from "./components/organisms/Home";
+import Navbar from "./components/molecules/Navbar";
+import OurServices from "./components/organisms/OurServices";
 import style from "./styles/app.module.scss";
 
 function App() {
