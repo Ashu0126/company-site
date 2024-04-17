@@ -1,5 +1,6 @@
 import axios from "axios";
 import style from "./index.module.scss";
+import Button from "../Button";
 
 const ContactUs = () => {
   const handleSubmit = async (e: any) => {
@@ -78,13 +79,13 @@ const ContactUs = () => {
             name="message"
           />
         </div>
-        <button type="submit">
-          <img
-            src="https://icons.iconarchive.com/icons/iconsmind/outline/512/Paper-Plane-icon.png"
-            alt="Send Icon"
-          />
-          Get in Touch
-        </button>
+        <Button
+          icon={
+            "https://icons.iconarchive.com/icons/iconsmind/outline/512/Paper-Plane-icon.png"
+          }
+        >
+          Get In Touch
+        </Button>
       </form>
     </div>
   );

@@ -1,7 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import "./variables.scss";
 
 * {
   margin: 0;
   padding: 0;
   font-family: "DM Sans", sans-serif;
+}
+
+h6 {
+  display: flex;
+  align-items: center;
+}
+
+h6::before {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background-color: $primary-text;
+  position: static;
+  display: inline-block;
+  margin-right: 0.5rem;
 }

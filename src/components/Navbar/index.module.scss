@@ -18,3 +18,12 @@
     font-weight: 600;
   }
 }
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+    ul {
+      display: none;
+    }
+  }
+}

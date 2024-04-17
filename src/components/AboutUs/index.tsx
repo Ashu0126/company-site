@@ -1,3 +1,4 @@
+import Button from "../Button";
 import style from "./index.module.scss";
 
 const AboutUs = () => {
@@ -22,7 +23,7 @@ const AboutUs = () => {
           soluta blanditiis placeat amet explicabo pariatur animi eveniet nam
           dolore repellendus?Lorem ipsum dolor quibusdam
         </p>
-        <button>Learn More</button>
+        <Button>Learn More</Button>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@
     }
 
     p {
-      width: 35rem;
+      max-width: 35rem;
     }
   }
 
@@ -24,5 +24,23 @@
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .serviceContainer {
+    padding: 4rem 2rem;
+
+    .serviceCards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .serviceContainer {
+    .serviceCards {
+      grid-template-columns: 1fr;
+    }
   }
 }

@@ -14,11 +14,10 @@ app.post("/send-email", async (req, res) => {
   try {
     const { name, email, cname, message } = req.body;
 
-    // Example email content
     const emailContent = {
       from: email,
       to: "ashish.jaryal14@gmail.com",
-      subject: "Contact Form Submission",
+      subject: "Let's Connect",
       html: `
         <p>Name: ${name}</p>
         <p>Email: ${email}</p>
@@ -27,7 +26,6 @@ app.post("/send-email", async (req, res) => {
       `,
     };
 
-    // Send email using Resend
     await resend.emails.send(emailContent);
 
     res.status(200).json({ message: "Email sent successfully" });
