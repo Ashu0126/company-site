@@ -42,7 +42,6 @@ const ContactUs = () => {
       console.error("Error sending email:", error);
       alert("Error sending email. Please try again.");
     }
-
     setDisabled(false);
   };
 
