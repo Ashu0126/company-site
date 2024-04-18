@@ -1,27 +1,26 @@
 import Card from "../../molecules/Card";
 import style from "./index.module.scss";
+import data from "./../../../data/service.json";
 
 const OurServices = () => {
   return (
-    <div className={style.serviceContainer}>
+    <div className={style.serviceContainer} id="services">
       <div className={style.header}>
-        <h6>OUR SERVICES</h6>
-        <h2>We Do Everything</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla,
-          recusandae dolore. Quam non repellendus, rem est animi quo excepturi
-          libero, harum delectus quia odio esse illum. Accusamus vel provident
-          totam.
-        </p>
+        <h6>{data?.subHeading}</h6>
+        <h2>{data?.heading}</h2>
+        <p>{data?.desc}</p>
       </div>
       <div className={style.services}>
         <div className={style.serviceCards}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {data?.services?.map((card: any) => (
+            <Card
+              key={card?.heading}
+              heading={card?.heading}
+              desc={card?.desc}
+              icon={card?.icon}
+              linkText={card?.linkText}
+            />
+          ))}
         </div>
       </div>
     </div>

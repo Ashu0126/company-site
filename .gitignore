@@ -9,6 +9,8 @@
 /coverage
 
 /api/node_modules
+/api/.env
+
 
 # production
 /build

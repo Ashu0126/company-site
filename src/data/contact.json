@@ -1,31 +1,44 @@
 {
+  "contactContent": {
+    "heading": "Let's Talk!",
+    "subHeading": "CONTACT US",
+    "desc": "We will reach out to you within 24 hours",
+    "info": "Don't like filling up forms? Email us directly at-",
+    "link": {
+      "href": "mailto:xyz@abc.com",
+      "icon": "/img/email.png",
+      "text": "xyz@abc.com"
+    }
+  },
   "form": {
     "inputField": [
       {
         "name": "name",
         "placeholder": "Name",
-        "icon": "https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png",
+        "icon": "/img/user.png",
         "type": "text"
       },
       {
         "name": "email",
         "placeholder": "Email Address",
-        "icon": "https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png",
+        "icon": "/img/email.png",
         "type": "email"
       },
       {
         "name": "cname",
         "placeholder": "Company Name",
-        "icon": "https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png",
+        "icon": "/img/company.png",
         "type": "text"
       },
       {
         "name": "message",
         "placeholder": "How we can help you? Feel free to contact us!",
-        "icon": "https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png",
+        "icon": "/img/pencil.png",
         "type": "textarea"
       }
     ],
-    "btnText": "Get In Touch"
+    "btnText": "Get In Touch",
+    "loadingText": "Sending...",
+    "btnIcon": "/svg/send.svg"
   }
 }

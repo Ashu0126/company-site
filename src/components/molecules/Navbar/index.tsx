@@ -1,13 +1,23 @@
 import style from "./index.module.scss";
+import data from "./../../../data/navbar.json";
 
 const Navbar = () => {
+  const handleClick = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className={style.navbar}>
-      <h3>COMPANY NAME</h3>
+      <h3>{data?.name}</h3>
       <ul>
-        <li>services</li>
-        <li>about us</li>
-        <li>contact us</li>
+        {data?.tabs?.map((tab: string) => (
+          <li key={tab} onClick={() => handleClick(tab?.toLowerCase())}>
+            {tab}
+          </li>
+        ))}
       </ul>
     </div>
   );

@@ -3,12 +3,22 @@ import style from "./index.module.scss";
 import Button from "../../atoms/Button";
 import data from "./../../../data/contact.json";
 import Input from "../../atoms/Input";
+import { useState } from "react";
+
+interface IInput {
+  name: string;
+  placeholder: string;
+  icon: string;
+  type: string;
+}
 
 const ContactUs = () => {
+  const [disabled, setDisabled] = useState(false);
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    setDisabled(true);
     const formData = new FormData(e.target);
-
     const payload: any = {};
 
     data?.form?.inputField?.forEach((input: any) => {
@@ -20,6 +30,8 @@ const ContactUs = () => {
         "https://company-site-api.vercel.app/send-email",
         payload
       );
+
+      setDisabled(false);
 
       if (response.status === 200) {
         alert("Email sent successfully!");
@@ -35,43 +47,29 @@ const ContactUs = () => {
   };
 
   return (
-    <div className={style.contactContainer}>
+    <div className={style.contactContainer} id="contact us">
       <div className={style.context}>
-        <h6>CONTACT US</h6>
-        <h2>{`Let's Talk!`}</h2>
-        <p>We will reach out to you within 24 hours</p>
-        <h5>Don't like filling up forms? Email us directly at-</h5>
-        <a href="mailto:xyz@abc.com">
-          <img
-            src="https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png"
-            alt="Mail Icon"
-          />
-          <p>xyz@abc.com</p>
+        <h6>{data?.contactContent?.subHeading}</h6>
+        <h2>{data?.contactContent?.heading}</h2>
+        <p>{data?.contactContent?.desc}</p>
+        <h5>{data?.contactContent?.info}</h5>
+        <a href={data?.contactContent?.link?.href}>
+          <img src={data?.contactContent?.link?.icon} alt="" />
+          <p>{data?.contactContent?.link?.text}</p>
         </a>
       </div>
       <form onSubmit={handleSubmit}>
-        {data?.form?.inputField?.map(
-          (input: {
-            name: string;
-            placeholder: string;
-            icon: string;
-            type: string;
-          }) => (
-            <Input
-              name={input?.name}
-              placeholder={input?.placeholder}
-              icon={input?.icon}
-              type={input?.type}
-            />
-          )
-        )}
-        <Button
-          icon={
-            "https://icons.iconarchive.com/icons/iconsmind/outline/512/Paper-Plane-icon.png"
-          }
-          type="submit"
-        >
-          {data?.form?.btnText}
+        {data?.form?.inputField?.map((input: IInput) => (
+          <Input
+            key={input?.name}
+            name={input?.name}
+            placeholder={input?.placeholder}
+            icon={input?.icon}
+            type={input?.type}
+          />
+        ))}
+        <Button icon={data?.form?.btnIcon} type="submit" disabled={disabled}>
+          {disabled ? data?.form?.loadingText : data?.form?.btnText}
         </Button>
       </form>
     </div>

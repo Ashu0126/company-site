@@ -3,8 +3,11 @@ const bodyParser = require("body-parser");
 const { Resend } = require("resend");
 const cors = require("cors");
 
+// Load environment variables
+require("dotenv").config();
+
 const app = express();
-const resend = new Resend("re_U29cheAr_DNpT192Jj8vDNcf9DXgNHQ4W");
+const resend = new Resend(process.env.RESEND_API_KEY);
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -1,24 +1,16 @@
 import Button from "../../atoms/Button";
 import style from "./index.module.scss";
+import data from "./../../../data/home.json";
 
 const Home = () => {
   return (
     <section className={style.home}>
       <div className={style.heroContent}>
-        <h1>
-          Lorem ipsum <span>dolor, sit</span>
-        </h1>
-        <p>
-          amet consectetur adipisicing elit. Id repellat obcaecati unde maiores
-          deserunt nam, eius cupiditate autem hic architecto quod sapiente
-          placeat nobis impedit modi labore. Blanditiis, necessitatibus qui?
-        </p>
-        <Button>Explore Us</Button>
+        <h1>{data?.heading}</h1>
+        <p>{data?.desc}</p>
+        <Button>{data?.btnText}</Button>
       </div>
-      <img
-        src="https://www.zebrawebs.com/images/background/digital%20seo.png"
-        alt=""
-      />
+      <img src={data?.heroImg} alt="" />
     </section>
   );
 };

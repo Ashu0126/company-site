@@ -1,19 +1,27 @@
 import style from "./index.module.scss";
 
-const Card = () => {
+interface ICard {
+  icon: string;
+  heading: string;
+  desc: string;
+  linkText: string;
+}
+
+const Card = (props: ICard) => {
+  const { icon, heading, desc, linkText } = props;
+
+  const handleClick = (event: any) => {
+    event.preventDefault();
+  };
+
   return (
     <div className={style.card}>
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/5738/5738077.png"
-        alt=""
-      />
-      <h4>App Development</h4>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
-        assumenda nihil sint? Nam aliquid natus excepturi expedita perspiciatis,
-        minus
-      </p>
-      <a href="javascript.void(0)">Explore</a>
+      <img src={icon} alt="" />
+      <h4>{heading}</h4>
+      <p>{desc}</p>
+      <a href="javascript.void(0)" onClick={handleClick}>
+        {linkText}
+      </a>
     </div>
   );
 };

@@ -16,6 +16,14 @@
     gap: 1.5rem;
     list-style: none;
     font-weight: 600;
+
+    li {
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
   }
 }
 
