@@ -31,8 +31,6 @@ const ContactUs = () => {
         payload
       );
 
-      setDisabled(false);
-
       if (response.status === 200) {
         alert("Email sent successfully!");
         e.target.reset();
@@ -44,6 +42,8 @@ const ContactUs = () => {
       console.error("Error sending email:", error);
       alert("Error sending email. Please try again.");
     }
+
+    setDisabled(false);
   };
 
   return (
