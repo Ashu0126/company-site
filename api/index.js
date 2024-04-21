@@ -19,7 +19,7 @@ app.post("/send-email", async (req, res) => {
 
     const emailContent = {
       from: email,
-      to: "xyz@abc.com",
+      to: "ashish.jaryal14@gmail.com",
       subject: "Let's Connect",
       html: `
         <p>Name: ${name}</p>
